@@ -1,0 +1,33 @@
+0. logos kopieren
+
+1. channel id setzen
+    private val CHANNEL_ID = "channel_id_example_preparation"
+
+2. notification channel einrichten
+2.1 createNotificationChannel() in onCreate() aufrufen
+2.2 permission in manifest setzen
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+3. ui
+3.1 rename Greeting in Buttons
+3.2 onCreate
+    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                        Buttons(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .padding(innerPadding)
+                        )
+                    }
+3.3 button columns
+3.4 test button
+
+4. request permissions
+4.1 sendNotification in Buttons Compose reingeben
+4.2 context in Buttons Compose reingeben
+
+5. impl buttons
+5.1 Notification with text
+5.2 Notification with text and picture
+5.3 Notification with big text
+5.4 Notification with Progressbar
+5.5 Notification with navigation to Intent
